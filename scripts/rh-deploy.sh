@@ -2,7 +2,7 @@
 
 #sudo systemctl stop <%= appName %>.service
 sudo chown -R <%= appUser %> <%= appRemoteTargetPath %>
-su <%= appUser %>
+
 cd <%= appRemoteTargetPath %>
 
 # unpack bundle / overwrite previous
@@ -12,7 +12,6 @@ rm -rf <%= appName %>.tar.gz
 # install npm dependencies
 cd bundle/programs/server/
 npm install
-exit
 
 # restart daemon
 #sudo systemctl daemon-reload
