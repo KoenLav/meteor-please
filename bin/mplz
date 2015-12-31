@@ -7,6 +7,7 @@ var Help = require('../lib/helpers');
 var fs = require('fs');
 
 console.log('\n\n\tmeteor-please\n\tSimple Meteor Deployment for RHEL/CentOS 7+\n\n'.bold.green);
+console.log('\n\tForked by wvanooijen92 for original library please see: https://github.com/hellstad/meteor-please'.bold.yellow);
 
 var cmd = process.argv[2];
 var current_dir = path.resolve('.');
