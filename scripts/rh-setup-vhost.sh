@@ -1,4 +1,5 @@
 #!/bin/bash
+cd <%= appRemoteTargetPath %>
 
 touch temp.sed
 echo 's/$[appSiteUrl]/<%= appSiteUrl %>' >> temp.sed

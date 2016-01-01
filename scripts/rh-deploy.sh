@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#sudo systemctl stop <%= appName %>.service
 sudo chown -R <%= appUser %> <%= appRemoteTargetPath %>
 
 cd <%= appRemoteTargetPath %>
+pm2 stop <%= appName %>
 
 # unpack bundle / overwrite previous
 tar -zxvf <%= appName %>.tar.gz
