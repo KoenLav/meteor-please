@@ -1,10 +1,10 @@
 #!/bin/bash
 cd <%= appRemoteTargetPath %>
 
-perl -pi -e s{appSiteUrl}{<%= appSiteUrl %>}g <%= appName %>.conf
-perl -pi -e s{appName}{<%= appName %>}g <%= appName %>.conf
-perl -pi -e s{appPort}{<%= appPort %>}g <%= appName %>.conf
-perl -pi -e s{appDest}{<%= appDest %>}g <%= appName %>.conf
+perl -pi -e s{appSiteUrl}{<%= appSiteUrl %>}g vhost.conf
+perl -pi -e s{appName}{<%= appName %>}g vhost.conf
+perl -pi -e s{appPort}{<%= appPort %>}g vhost.conf
+perl -pi -e s{appDest}{<%= appDest %>}g vhost.conf
 
-sudo mv <%= appName %>.conf /etc/nginx/conf.d/sites-enabled
+sudo mv vhost.conf /etc/nginx/conf.d/sites-enabled/<%= appName %>.conf
 sudo systemctl restart nginx
