@@ -5,7 +5,7 @@ Deploy your Meteor app on RHEL flavoured boxes via SSH, and keep your apps alive
 
 ## Installation
 ````
-npm install -g mplz
+npm install -g https://github.com/wvanooijen92/meteor-please.git
 ````
 
 ## Usage
