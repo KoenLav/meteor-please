@@ -2,8 +2,8 @@
 cd <%= appRemoteTargetPath %>
 
 
-sed -i 's/${appSiteUrl}/<%= appSiteUrl %>' vhost.conf
-sed -i 's/${appName}/<%= appName %>' vhost.conf
-sed -i 's/${appPort}/<%= appPort %>' vhost.conf
+perl -pi -e 's/${appSiteUrl}/<%= appSiteUrl %>' vhost.conf
+perl -pi -e 's/${appName}/<%= appName %>' vhost.conf
+perl -pi -e 's/${appPort}/<%= appPort %>' vhost.conf
 
 sudo systemctl restart nginx
