@@ -1,13 +1,9 @@
 #!/bin/bash
 cd <%= appRemoteTargetPath %>
 
-touch temp.sed
-echo 's/${appSiteUrl}/<%= appSiteUrl %>' >> temp.sed
-echo 's/${appName}/<%= appName %>' >> temp.sed
-echo 's/${appPort}/<%= appPort %>' >> temp.sed
 
-sed -f temp.sed nginx.conf > <%= appName %>.conf
-
-rm temp.sed
+sed -i 's/${appSiteUrl}/<%= appSiteUrl %>' <%= appName %>.conf
+sed -i 's/${appName}/<%= appName %>' <%= appName %>.conf
+sed -i 's/${appPort}/<%= appPort %>' <%= appName %>.conf
 
 sudo systemctl restart nginx
