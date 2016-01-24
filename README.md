@@ -2,6 +2,7 @@
 [![npm version](https://badge.fury.io/js/mplz.svg)](http://badge.fury.io/js/mplz)
 ### Simple Meteor Deployment for RHEL/CentOS 7+
 Deploy your Meteor app on RHEL flavoured boxes via SSH, and keep your apps alive with __pm2__. Your app is served through reverse proxy by __nginx__. This is a deployment tool that I personally use in production, based on [meteor-up](https://github.com/arunoda/meteor-up). If you encounter any bugs or have a feature request, please post an issue. (SSL is implemented but not tested thoroughly yet)
+server_name url must be in format subdomain.domain.com no "http://" and no "/" at the end!
 
 ## Installation
 ````
