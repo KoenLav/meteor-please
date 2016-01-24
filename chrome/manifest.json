@@ -1,0 +1,41 @@
+{
+  "name": "Mr. Winston",
+  "description": "Hospitality Cash Register",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "44",
+  "app":{
+    "background": {
+      "scripts": [
+        "initApp.js"
+      ],
+    "persistent": false
+    }
+  },
+  "permissions": [
+    "usb",
+    "fullscreen",
+    "storage",
+	"fileSystem",
+	"unlimitedStorage",
+    "http://localhost/*",
+    "http://localhost:3000/*",
+    {"usbDevices":
+      [
+        {"vendorId":1208,"productId":3587},
+        {"vendorId":1208,"productId":3605},
+        {"vendorId":1208,"productId":514}
+      ]
+    }
+  ],
+  "sockets": {
+    "tcp": {
+      "connect": [
+       "*:*"
+      ]
+    }
+  },
+  "kiosk_enabled": true,
+  "icons": {
+  }
+}

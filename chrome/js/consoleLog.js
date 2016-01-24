@@ -1,0 +1,1 @@
+console.groupCollapsed("Startup messages (plugins & support)");
