@@ -11,6 +11,7 @@ rm -rf <%= appName %>.tar.gz
 
 # install npm dependencies
 cd bundle/programs/server/
+nvm use <%= nodeVersion%>
 npm install
 
 # restart daemon
